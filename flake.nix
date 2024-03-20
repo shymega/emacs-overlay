@@ -10,6 +10,7 @@
     flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-23.11";
+    emacsconf2nix.url = "github:shymega/emacsconf2nix";
   };
 
   outputs =
@@ -17,6 +18,7 @@
     , nixpkgs
     , nixpkgs-stable
     , flake-utils
+    , emacsconf2nix
     }:
     let
       importPkgs = path: attrs: import path (attrs // {
